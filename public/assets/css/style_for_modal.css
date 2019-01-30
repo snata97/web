@@ -1,0 +1,99 @@
+.overlay {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display:none;
+}
+
+.popup {
+	position:absolute;
+	width:400px;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	padding: 40px;
+	box-sizing: border-box;
+	background-color: #F2FDFF;
+	color: #242F30;
+}
+
+.button_yes_no {
+	margin-right:120px;
+	margin-left:120px;
+	margin-top:20px;
+}
+
+.for_p {
+	text-align: center;
+	font-size: 17px;
+	color:#242F30;
+}
+
+.lightbox {
+	display: none;
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	overflow-y: auto;
+}
+
+.overlay_foto {
+	position: absolute;
+	z-index:-1;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,.8);
+}
+
+.next {
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	padding: 25px;
+	cursor: pointer;
+}
+
+.prev {
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	padding: 25px;
+	cursor: pointer;
+}
+
+.close {
+	text-align: center;
+	font-size: 25px;
+	color: white;
+	padding: 15px;
+	cursor: pointer;
+}
+
+.overlay_popOver {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display:none;
+}
+
+.popup_popOver {
+	position:absolute;
+	width:300px;
+	height:80px;
+	left:600px;
+	top:180px;
+	transform: translate(-50%,-50%);
+	padding: 5px;
+	box-sizing: border-box;
+	background-color: #F2FDFF;
+	color: #242F30;
+}

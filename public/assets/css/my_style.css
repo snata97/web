@@ -1,0 +1,157 @@
+			* {font-family: 'Playfair Display';}
+			A{text-decoration:none; outline: none;}
+			A:link {color:#00CBCC}
+			A:visited {color:#00CBCC;}
+			A:hover {color: #747F7F}
+			body {margin: 0;background: linear-gradient(80deg, #FFFFFF, #007A7A);}
+			header {
+				background: #F2FDFF;
+				text-align: center;
+				font-size: 22px;
+			}
+			p{
+				text-align: left;
+				font-size: 20px;
+				color:#242F30;
+			}
+			textarea {
+				resize: none;
+				overflow: auto;
+			}
+			legend{
+				font-size: 25px;
+			}
+			fieldset.contact p{
+				font-size: 20px;
+			}
+			.group{
+				font-size: 15px;
+			}
+			footer {
+				background: #F2FDFF;
+				text-align: left;
+				margin-top: 20px; /* ������ */
+				padding: 5px; /* ���� ������ ������ */
+			}
+			
+			ul.interes li {
+				list-style-type:square;
+				list-style-position: outside;
+				font-size: 25px;
+				color:#242F30;
+				text-decoration:underline;
+				position: relative;
+			}
+			
+			ul.menu li {
+				list-style: none;
+				padding: 6px;
+				display:inline;
+				margin-right: 5px; /* ������ */
+				padding: 10px; /* ���� ������ ������ */
+				position: relative;
+				cursor: pointer; /*��������� ������� ����*/
+			}
+			
+			ul.submenu li{
+				display:block;
+				width: 160px;
+				padding: 0px;
+				margin-right:10px;
+			}
+			
+			.submenu {
+				background: #F2FDFF;
+				position: absolute;
+				left: 0;
+				visibility: hidden;
+				z-index: 5;
+				width: 200px;
+				padding: 5px;
+				cursor: pointer; /*��������� ������� ����*/
+			}
+			
+			.history p{
+				text-align: center;
+				font-size: 28px;
+			}
+			
+			.autobiography p{
+				font-size: 23px;
+			}
+			.interes p{
+				font-size: 35px;
+			}
+			.interes h1{
+				text-align: left;
+				font-size: 30px;
+			}
+			.interes a{
+				color: #242F30;
+			}
+			TR.studies TD{
+				font-size: 25px;
+				background: white;
+			}
+			.tables table{
+				width: 1000px;
+				border-collapse: collapse;
+				border: 2px solid grey; /* ����� ������ ������� */
+				margin: auto; /* ����������� ������� �� ������ ����  */
+				text-align: center;
+				font-size: 17px;
+				background: #F2FDFF;
+			}
+			.tables_photu_album table{
+				border: 2px solid grey; /* ����� ������ ������� */
+				margin: auto; /* ����������� ������� �� ������ ����  */
+				text-align: center;
+			}
+			.tables TD, TR{
+				border: 2px solid black;
+			}
+			ol.interes li{
+				font-size: 23px;
+				margin-right: 15px;
+				padding-left: 20px;
+			}
+			#H1 {
+				text-align: center;
+				font-size: 18px;
+				color:#242F30;
+			}
+			#H2{
+				text-align: center;
+				font-size: 17px;
+				color:#242F30;
+			}
+			.p_style_first_letter{
+				color: #2E9FB2;
+				font-size: 30px
+			}
+			.image-decor{
+				position: relative;
+				display: table;
+				margin: auto;
+				border: 5px solid #F2FDFF;
+			}
+			.image-decor img {
+				display: block;
+			}
+			.decor-photo img {
+				position: relative;
+				display: table-cell;
+				margin: auto;
+				border: 3px solid #798C8C;
+				box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, .1);
+			}
+			.photo-title-decor {
+				text-align: center;
+				font-size: 18px;
+			}
+		/*	TR.decor-photo
+			TR.photo-title-decor*/
+			
+			.contact{
+				border : 1px solid black;
+			}

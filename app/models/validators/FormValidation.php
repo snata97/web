@@ -1,7 +1,5 @@
 <?php
 
-
-
 class FormValidation
 {
     protected $rules=[];//массив, содержащий набор правил проверки валидности данных
@@ -31,14 +29,12 @@ class FormValidation
             return $this->errors["isGreater"];
         }
     }
-    /*public function isEmail($data){
 
-    }*/
     public function setRule($field_name,$validator_name){
         $this->rules[$field_name]=$validator_name;
         return $this;
     }
-    public function validate($post_array,$form_name) : int{
+    public function validate($post_array,$form_name){
         switch ($form_name){
             case ("mailex"):
                 if(count($post_array)!=7){
@@ -61,7 +57,6 @@ class FormValidation
                 }
             }
         }
-        return count($this->errors);
     }
     public function showErrors(){
         $errors="<div id='valid'";

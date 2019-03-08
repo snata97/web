@@ -54,54 +54,48 @@ function CreateTableAllTimeHistory(){
 	body.appendChild(div_all_time);
 	body.appendChild(div);
 	div.id='cookies';
-	div.className = 'tables';	
-	for (var i = 0; i < pages.length; i++) {
-		var iValue = getCookie[pages[i]] || 0;
-		setCookie(pages[i], iValue);
-	}
-	var table = document.createElement('table');
+	div.className = 'tables';
+	table = document.createElement('table');
 	div.appendChild(table);
 	
-	var p_all_time=document.createElement('p');
-	var text_all_time=document.createTextNode('История за все время');
+	p_all_time=document.createElement('p');
+	text_all_time=document.createTextNode('История за все время');
 	div_all_time.appendChild(p_all_time);
 	p_all_time.appendChild(text_all_time);
 	
-	var row1 = table.insertRow();
+	row1 = table.insertRow();
 	row1.className="studies";
 	row1.id='row1';	
-	var row2 = table.insertRow();
+	row2 = table.insertRow();
 	row2.id='row2';	
 	
 	// первая строка
-	for(var i = 0; i < pages.length; i++){
-		var cell = row1.insertCell();
+	for(i = 0; i < pages.length; i++){
+		cell = row1.insertCell();
 		cell.innerHTML=pages[i];
 	}
 	//вторая строка
-	for(var i = 0; i < pages.length; i++){
-		var cell = row2.insertCell();
+	for(i = 0; i < pages.length; i++){
+		cell = row2.insertCell();
 		cell.innerHTML=getCookie(pages[i]);
 	}
 }
 
-function setCookie(name, value) {
-    document.cookie = name + "=" + value + ";";
-}
-
 function getCookie(name) {
-	var ar = document.cookie.split(';');
-	for(var i=0; i< ar.length; i++){
-		if(ar[i][0]==name){
-			return decodeURIComponent(ar[i][0]);
-		}
-	}
-    return 0;
+    var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
-function SaveToCookies(name) {
-    if (getCookie(name)=="0")
-        setCookie(name, 1);
-    else
-        setCookie(name, (parseInt(getCookie(name))+ 1));
+function setCookie(name) {
+    var newValue;
+    var currentValue = parseInt(getCookie(name));
+    if (isNaN(currentValue)) {
+        currentValue=0;
+    }
+    newValue = currentValue + 1;
+    //document.cookie = name + "=" +newValue + expires + "; path=/";
+    document.cookie = name + "=" +newValue + "; path=/";
 }
+

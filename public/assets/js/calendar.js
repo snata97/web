@@ -165,8 +165,9 @@ function showcalendar(input_date) {
 	wrapper.style.top = getCoords(input).top;
 	wrapper.style.display = (wrapper.style.display=="block")? "none" : "block";
 }
+/*
 
 if (window.addEventListener)
 	window.addEventListener('load', createTable, false);
 else if (window.attachEvent)
-	window.attachEvent('onload', createTable);
+	window.attachEvent('onload', createTable);*/

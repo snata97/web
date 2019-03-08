@@ -37,11 +37,11 @@ function CreateSubMenu(){
 	var a_3=a_1.cloneNode();
 	var a_4=a_1.cloneNode();
 	var a_5=a_1.cloneNode();
-	a_1.href="interests.php#p1";
-	a_2.href="interests.php#p2";
-	a_3.href="interests.php#p3";
-	a_4.href="interests.php#p4";
-	a_5.href="interests.php#p5";
+	a_1.href="/interests/index#p1";
+	a_2.href="/interests/index#p2";
+	a_3.href="/interests/index#p3";
+	a_4.href="/interests/index#p4";
+	a_5.href="/interests/index#p5";
 	var p_1=document.createTextNode('Хобби');
 	var p_2=document.createTextNode('Сериалы');
 	var p_3=document.createTextNode('Музыка');

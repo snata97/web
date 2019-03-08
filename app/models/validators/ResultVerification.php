@@ -1,15 +1,18 @@
 <?php
 
-
-
-class ResultVarification extends FormValidation
+class ResultVerification extends FormValidation
 {
     public function checkTest($post_array){
-        $valid=true;
         if($post_array['question1']!="question1.number3") {
             $this->errors["первый ответ"] = "Неверно";
         }
-        if($post_array['question3']!="question3.number2"){
+        if($post_array['question2'] != "единство") {
+            $this->errors["второй ответ"] = "Неверно";
+        }
+        if(!$post_array['question3']){
+            $this->errors["третий ответ"] = "не выбран";
+        }
+        else if($post_array['question3']!="question3.number2"){
             $this->errors["третий ответ"] = "Неверно";
         }
     }

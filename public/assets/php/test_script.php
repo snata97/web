@@ -1,12 +1,13 @@
 <?php
 
-include("../app/core/FormValidation.php");
-include("../app/core/ResultVarification.php");
+/*include("../app/core/FormValidation.php");
+include("../app/core/ResultVerification.php");*/
+include("app/core/TestControllerphp");
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $this->model->validate($_POST);
     $validator = new FormValidation();
     $test_check = new ResultVarification();
-    $validator->setRule('fio',"/^[A-zА-я]{1,}[\s][A-zА-я]{1,}[\s][A-zА-я]{1,}$/u");;
     $errors=$validator->validate($_POST,"test");
     echo $validator->showErrors();
     if(!$errors) {

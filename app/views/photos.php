@@ -11,6 +11,6 @@
 	</main>
     <div>
         <?php
-            output_photos($model);
+            $model->output_photos();
         ?>
     </div>

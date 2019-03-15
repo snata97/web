@@ -11,8 +11,6 @@
     <script src="/public/assets/js/script_for_date.js"></script>
     <script src="/public/assets/js/history.js"></script>
     <script src="/public/assets/js/calendar.js"></script>
-    <?php include $_SERVER['DOCUMENT_ROOT']."/public/assets/php/interests_script.php"?>
-    <?php include $_SERVER['DOCUMENT_ROOT']."/public/assets/php/photo_script.php"?>
 </HEAD>
 <BODY>
     <?php

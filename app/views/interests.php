@@ -32,31 +32,31 @@
 		<p id="p1">Хобби</p>
 			<ol class="interes">
                 <?php
-                    Interests($model->hobby);
+                     $model->Interests($model->hobby);
                 ?>
 			</ol>
 		<p id="p2">Любимые сериалы</p>
 			<ol class="interes">
                 <?php
-			        Interests($model->serials);
+                    $model->Interests($model->serials);
                 ?>
 			</ol>
 		<p id="p3">Любимая музыка</p>
 			<ol class="interes">
                 <?php
-				    Interests($model->music);
+                $model->Interests($model->music);
 			    ?>
 			</ol>
 		<p id="p4">Любимые компьютерные игры</p>
 			<ol class="interes">
                 <?php
-				    Interests($model->games);
+                $model->Interests($model->games);
 				?>
 			</ol>
 		<p id="p5">Спорт</p>
 			<ol class="interes">
 			    <?php
-			        Interests($model->sport);
+                $model->Interests($model->sport);
 			    ?>
 			</ol>
 	</div>

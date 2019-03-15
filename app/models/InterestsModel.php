@@ -24,4 +24,11 @@ class InterestsModel extends Model
 "Фредерик Шопен - Осенний вальс","Ace of base - All that she wants"];
     public $games = ["The Sims 4","Spore","Asphalt"];
     public $sport = ["Плавание","Катание на коньках","Катание на лыжах"];
+
+    public function Interests($args)
+    {
+        foreach ($args as $a) {
+            echo "<li>$a</li>";
+        }
+    }
 }

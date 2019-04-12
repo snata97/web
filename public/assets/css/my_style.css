@@ -149,9 +149,49 @@
 				text-align: center;
 				font-size: 18px;
 			}
-		/*	TR.decor-photo
-			TR.photo-title-decor*/
 
 			.contact{
 				border : 1px solid black;
+			}
+			.blog{
+				display:flex;
+				flex-flow: row nowrap;
+				background-color:#F2FDFF;
+			}
+			.title_blog{
+				font-size: 22px;
+				display:flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				background-color: lightblue;
+				height:34px;
+				margin-bottom: 4px;
+			}
+			.title_blog h2{
+				margin-left: 10px;
+			}
+			.blog_body{
+				margin-left: 10px;
+				background-color:#F2FDFF;
+			}
+			.blog_photo img{
+				height: 200px;
+			}
+			hr{
+				border:none;
+				background-color: #F2FDFF;
+				height:2px;
+			}
+			.blog_link_string{
+				display:flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+			}
+			.blog_link_string div{
+				margin-left:2px;
+				color: #242F30;
+			}
+			.blog_link_string div a{
+				margin-left:2px;
+				color: aliceblue;
 			}

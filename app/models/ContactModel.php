@@ -6,10 +6,10 @@
  * Time: 15:16
  */
 
-include("app/core/Model.php");
+include("app/core/BaseActiveRecord.php");
 
 
-class ContactModel extends Model
+class ContactModel extends BaseActiveRecord
 {
     function __construct()
     {

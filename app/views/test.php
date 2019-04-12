@@ -1,21 +1,3 @@
-
-	<header>
-		<nav>
-			<ul class="menu" id="menu" value="7">
-				<li><a href="/home/index" id="1" onmouseover="ChangeColor1()" onmouseout="ReChange()">Главная</a></li>
-				<li><a href="/about/index" id="2" onmouseover="ChangeColor2()" onmouseout="ReChange()">Обо мне</a></li>
-				<li id="li_3"><a href="/interests/index" class="menu_item" id="3" onmouseover="ChangeColor3(),SubMenu(id)" onmouseout="ReChange()">Мои интересы</a>
-					<script>CreateSubMenu();</script>
-				</li>
-				<li><a href="/studies/index" id="4" onmouseover="ChangeColor4()" onmouseout="ReChange()">Учеба</a></li>
-				<li><a href="/photos/index" id="5" onmouseover="ChangeColor5()" onmouseout="ReChange()">Фотоальбом</a></li>
-				<li><a href="/contact/index" id="6" onmouseover="ChangeColor6()" onmouseout="ReChange()">Контакт</a></li>
-				<li><a href="/test/index" id="7">Тест по дисциплине</a></li>
-				<li><a href="/history/index" id="8 ">История просмотра</a></li>
-			</ul>
-			<span id="time"><script>showdate();</script></span>
-		</nav>
-	</header>
 	<FORM name="test" METHOD="post" action="validate">
 			<fieldset class="contact">
 				<legend>Контактная информация</legend>
@@ -50,17 +32,17 @@
 					<p><label> Конкурентные взаимоотношения возникают между:</label>
 					<select name="question1" class="group">
 						<option selected disabled>Выберите ответ
-						<option value="question1.number1">автотрофами и гетеротрофами
-						<option value="question1.number2">симбионтами и паразитами
-						<option value="question1.number3">видами со сходными потребностями
+						<option value="автотрофами и гетеротрофами">автотрофами и гетеротрофами
+						<option value="симбионтами и паразитами">симбионтами и паразитами
+						<option value="видами со сходными потребностями">видами со сходными потребностями
 					</select>
 					</p>
 					<p><label>Экосистема - это функциональное ... живых организмов и среды их обитания.</label>
 					<textarea name="question2" rows="3" cols="50"></textarea>
 					</p>
 					<p><label>Потребителями органических веществ в экосистеме являются:</label>
-						<input name="question3" type="radio" value="question3.number1">продуценты
-						<input name="question3" type="radio" value="question3.number2">консументы
+						<input name="question3" type="radio" value="продуценты">продуценты
+						<input name="question3" type="radio" value="консументы">консументы
 					</p>
 			</fieldset>
 		<p>
@@ -68,3 +50,51 @@
 			<input type="reset" value="Очистить">
 		</p>
 	</FORM>
+    <?php
+        session_start();
+        if(!isset($_SESSION['FIO'])){
+            header('Location:test/index');
+            exit;
+        }
+        echo "<div class='tables'>";
+        echo "<table>";
+            echo "<TR>";
+                echo "<TD>";
+                    echo "дата";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "ФИО";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "вопрос1";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "вопрос2";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "вопрос3";
+                echo "</TD>";
+            echo "</TR>";
+        $test_data=TestModel::findAll();
+        foreach($test_data as $value){
+            echo "<TR>";
+                echo "<TD>";
+                    echo "$value->data";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "$value->fio";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "$value->correct_answer1";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "$value->correct_answer2";
+                echo "</TD>";
+                echo "<TD>";
+                    echo "$value->correct_answer3";
+                echo "</TD>";
+            echo "</TR>";
+
+        }
+        echo "</table></div>"
+    ?>

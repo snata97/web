@@ -6,7 +6,7 @@
  * Time: 8:01
  */
 
-include_once("app/models/validators/FormValidation.php");
+include("app/models/validators/FormValidation.php");
 
 class Model
 {

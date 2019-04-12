@@ -1,17 +1,27 @@
 <?php
 
-include("app/core/Model.php");
+include("app/core/BaseActiveRecord.php");
 include("app/models/validators/ResultVerification.php");
+include('config.inc.php');
 
-class TestModel extends Model
+class TestModel extends BaseActiveRecord
 {
+    public $id;
+    public $groupa;
+    public $data;
+    public $fio;
+    public $question1;
+    public $question2;
+    public $question3;
+    public $correct_answer1;
+    public $correct_answer2;
+    public $correct_answer3;
+    public $msg_for_formValidation;
+
+    protected static $table='test';
+
     function __construct(){
         parent::__construct();
-        $this->validator = new ResultVerification();
     }
-    function validate($post_data, $form_name)
-    {
-        parent::validate($post_data, $form_name);
-        $this->validator->checkTest($this->post_data);
-    }
+
 }

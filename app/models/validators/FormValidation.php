@@ -46,6 +46,16 @@ class FormValidation
                     $this->errors["field"] = "Заполнены не все поля";
                 }
                 break;
+            case ("blog"):
+                if(count($post_array)!=2){
+                    $this->errors["field"] = "Заполнены не все поля";
+                }
+                break;
+            case ("registration"):
+                if(count($post_array)!=4){
+                    $this->errors["field"] = "Заполнены не все поля";
+                }
+                break;
         }
 
         foreach($post_array as $key=>$value){
@@ -58,15 +68,21 @@ class FormValidation
             }
         }
     }
-    public function showErrors(){
+    public function showErrors($msg){
         $errors="<div id='valid'";
         if(count($this->errors)==0){
-            $errors.="<p style='color: green; font-size: 22px;'> Ваше сообщение будет отправлено </p>";
+            $errors.="<p style='color: green; font-size: 22px;'>".$msg."</p>";
         }
         else{
             foreach($this->errors as $error => $value)
                 $errors.="<p style='color: red; font-size: 22px;'> Ошибка! ".$error." : ".$value."</p>";
         }
         return $errors."</div>";
+    }
+    public function getCountErrors(){
+        return count($this->errors);
+    }
+    public function setError($key,$value){
+        $this->errors["$key"] = "$value";
     }
 }

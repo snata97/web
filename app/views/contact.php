@@ -1,23 +1,7 @@
-
-<main>
-	<header>
-		<nav>
-			<ul class="menu" id="menu" value="6">
-				<li><a href="/home/index" id="1" onmouseover="ChangeColor1()" onmouseout="ReChange()">Главная</a></li>
-				<li><a href="/about/index" id="2" onmouseover="ChangeColor2()" onmouseout="ReChange()">Обо мне</a></li>
-				<li id="li_3"><a href="/interests/index" class="menu_item" id="3" onmouseover="ChangeColor3(),SubMenu(id)" onmouseout="ReChange()">Мои интересы</a>
-					<script>CreateSubMenu();</script>
-				</li>
-				<li><a href="/studies/index" id="4" onmouseover="ChangeColor4()" onmouseout="ReChange()">Учеба</a></li>
-				<li><a href="/photos/index" id="5" onmouseover="ChangeColor5()" onmouseout="ReChange()">Фотоальбом</a></li>
-				<li><a href="/contact/index" id="6">Контакт</a></li>
-				<li><a href="/test/index" id="7" onmouseover="ChangeColor7()" onmouseout="ReChange()">Тест по дисциплине</a></li>
-				<li><a href="/history/index" id="8 ">История просмотра</a></li>
-			</ul>
-			<span id="time"><script>showdate();</script></span>
-		</nav>
-	</header>
-	<FORM name="mailex" method="post" action="validate">
+<?php
+    echo "<script src='/public/assets/js/calendar.js'></script>";
+?>
+<FORM name="mailex" method="post" action="validate">
 			<fieldset class="contact">
 				<legend>Контактная информация</legend>
 				<p><label>ФИО</label><input name="fio" id="fio" type="text" size="50" onBlur="Check_FIO(this),Check()" onclick="this.select()"></p>
@@ -49,7 +33,6 @@
 			</fieldset>
 		<p>
 			<input type="submit" id="submit" value="Отправить">
-			<input type="button" class="js-button-campaign" value="Очистить">
+            <input type="reset" value="Очистить">
 		</p>
 	</FORM>
-    </main>

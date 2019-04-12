@@ -1,5 +1,5 @@
 function CreateTableCurrentHistory(){
-	var pages = Array('home', 'about', 'interests', 'studies', 'album',  'contact', 'test');
+	var pages = Array('home', 'about', 'interests', 'studies', 'album',  'contact', 'test', 'guestBook');
 	for (var i = 0; i < pages.length; i++) {
 		var iValue = localStorage[pages[i]] || 0;
 		localStorage.setItem(pages[i], iValue);
@@ -46,7 +46,7 @@ function LocalStorage(id){
 }
 
 function CreateTableAllTimeHistory(){
-	var pages = Array('home', 'about', 'interests', 'studies', 'album',  'contact', 'test');
+	var pages = Array('home', 'about', 'interests', 'studies', 'album',  'contact', 'test', 'guestBook');
 	body = document.body;
 	div_all_time = document.createElement('div');
 	div_all_time.className="history";

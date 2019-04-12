@@ -1,16 +1,5 @@
-
-	<main>
-	<header>
-		<nav>
-			<ul class="menu" id="menu" value="5">
-				<li><a href="/home/index" id="1" onmouseover="ChangeColor1()" onmouseout="ReChange()">Главная</a></li>
-			</ul>
-			<span id="time"><script>showdate();</script></span>
-		</nav>
-	</header>
-	</main>
-    <div>
+	<div>
         <?php
-            $model->output_photos();
+            output_photos($model->get_fotos(),$model->get_titles());
         ?>
     </div>

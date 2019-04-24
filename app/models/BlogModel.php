@@ -6,7 +6,7 @@
  * Time: 11:18
  */
 
-include("app/core/BaseActiveRecord.php");
+include_once("app/core/BaseActiveRecord.php");
 include('config.inc.php');
 
 class BlogModel extends BaseActiveRecord

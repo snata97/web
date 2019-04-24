@@ -34,8 +34,6 @@
     <?php
         include 'app/admin/views/'.$content_view;
     ?>
-<script>LocalStorage("<?=$name_page ?>");</script>
-<script>setCookie("<?=$name_page ?>");</script>
 <footer>
     <p>&copy; Сидоренко Наталия </p>
 </footer>

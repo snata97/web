@@ -30,7 +30,7 @@ class AuthorizationController extends Controller
     }
     public function out(){
         session_destroy();
-        echo $this->view->render("authorization.php","Авторизация","authorization");
+        echo $this->view->render("authorization.php","Авторизация","authorization",$this->model);
         header('Location:/authorization/index');
         exit;
     }

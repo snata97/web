@@ -1,6 +1,6 @@
 <?php
 
-include("app/core/Model.php");
+include_once("app/core/Model.php");
 
 abstract class BaseActiveRecord extends Model
 {
@@ -48,7 +48,7 @@ abstract class BaseActiveRecord extends Model
             if($value=='id') continue;//id
             $values[]="'$array_obj[$value]'";//значения
             $fields_columns[]="`$value`";
-            $update_array[]="'$array_obj[$value]'=`$value`";//для обновления
+            $update_array[]="`$value`='$array_obj[$value]'";//для обновления
         }
 
         if ($array_obj['id']==NULL){
@@ -64,10 +64,15 @@ abstract class BaseActiveRecord extends Model
             }
         }
         else {
-            $query_update = 'UPDATE ' . static::$table . ' SET '.join(', ',$update_array).' WHERE id=:id';
+            $query_update = 'UPDATE `'.static::$table .'` SET '.join(', ',$update_array).' WHERE id=:id';
             $s = self::$pdo->prepare($query_update);
-            $s->bingParam(':id',$this->id);
-            $s->execute();
+            $s->bindParam(':id',$array_obj['id']);
+            try {
+                $s->execute();
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+            }
         }
         return $this;
     }

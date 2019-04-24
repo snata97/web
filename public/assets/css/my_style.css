@@ -195,3 +195,41 @@
 				margin-left:2px;
 				color: aliceblue;
 			}
+			.checkLogin{
+				display:flex;
+				flex-flow: row nowrap;
+				justify-content: start;
+				align-items: center;
+			}
+			.checkLogin >p{
+				display:flex;
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			.checkLogin >div{
+				display:flex;
+				margin-left: 10px;
+				font-size: 18px;
+			}
+			.comments{
+				background-color: rgba(191, 199, 255, 0.51);
+			}
+			.comments_output{
+				display:flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				background-color: rgba(191, 199, 255, 0.64);
+				border: 1px dashed #F2FDFF;
+			}
+			.comments_output p{
+				margin-left: 10px;
+				border: 1px outset #F2FDFF;
+			}
+			.comments_output div{
+				margin-left: 10px;
+				font-size: 20px;
+				border: 1px inset #F2FDFF;
+			}
+			.blog_edit_div{
+				background-color: rgba(245, 194, 255, 0.5);
+			}

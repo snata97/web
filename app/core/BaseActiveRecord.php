@@ -48,7 +48,9 @@ abstract class BaseActiveRecord extends Model
             if($value=='id') continue;//id
             $values[]="'$array_obj[$value]'";//значения
             $fields_columns[]="`$value`";
-            $update_array[]="`$value`='$array_obj[$value]'";//для обновления
+            if($array_obj[$value]) {
+                $update_array[] = "`$value`='$array_obj[$value]'";//для обновления
+            }
         }
 
         if ($array_obj['id']==NULL){

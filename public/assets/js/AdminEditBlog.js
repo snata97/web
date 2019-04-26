@@ -21,14 +21,14 @@ function send(id,myform){
         document.body.appendChild(iframe);
         if (inp_title.length != 0 && inp_text.length != 0) {
             $xml_string = "<blog>" + "<title>" + encodeURIComponent(inp_title) + "</title>" + "<body>" + encodeURIComponent(inp_text) + "</body>" + "<id>" + encodeURIComponent(id) + "</id>" + "</blog>";
-            $( '#'+id+' .title_blog h2' ).text(encodeURIComponent(inp_title));
-            $( '#'+id+' .blog .blog_body p' ).text(encodeURIComponent(inp_text));
+            $( '#'+id+' .title_blog h2' ).text(inp_title);
+            $( '#'+id+' .blog .blog_body p' ).text(inp_text);
         } else if (inp_title.length != 0) {
             $xml_string = "<blog>" + "<title>" + encodeURIComponent(inp_title) + "</title>" + "<id>" + id + "</id>" + "</blog>";
-            $( '#'+id+' .title_blog h2' ).text(encodeURIComponent(inp_title));
+            $( '#'+id+' .title_blog h2' ).text(inp_title);
         } else if (inp_text.length != 0) {
             $xml_string = "<blog>" + "<body>" + inp_text + "</body>" + "<id>" + id + "</id>" + "</blog>";
-            $( '#'+id+' .blog .blog_body p' ).text(encodeURIComponent(inp_text));
+            $( '#'+id+' .blog .blog_body p' ).text(inp_text);
         }
         $('#frame').attr('src', "frame?data="+$xml_string);
     }
